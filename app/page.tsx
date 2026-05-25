@@ -319,6 +319,15 @@ export default function Home() {
               {/* Sync status */}
               <SyncStatus state={syncState} onRetry={retrySync} />
 
+              {/* Bouton Mon ID — ajoute ces lignes */}
+              <button
+                onClick={() => setShowUserPanel(true)}
+                className="p-1.5 rounded-lg hover:bg-zinc-100 text-zinc-500 transition-colors"
+                title="Mon accès"
+              >
+                <UserCircle size={15} />
+              </button>
+
               {/* Toggle vue — tablette + desktop */}
               <div className="hidden md:flex items-center bg-zinc-100 rounded-lg p-0.5 mx-1">
                 {VIEW_MODES.map(({ mode, Icon, label }) => (
